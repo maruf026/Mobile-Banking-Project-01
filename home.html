@@ -13,29 +13,92 @@
             <div class="camera"></div>
             <div class="display">
               <div class="artboard artboard-demo phone-1">
-                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+
+
+                <div class="stats shadow">
+                    <div class="stat">
+                      <div class="stat-title">Balance</div>
+                      <div id="acount-balance" class="stat-value">9400</div>
+                      
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+                
+                  <!-- Buttons -->
+
+                 <div class="buttons">
+                    <button id="addmoney-btn" class="btn btn-active btn-primary">Add Money</button>
+                    <button id="cashout-btn" class="btn btn-active btn-secondary">Cash Out</button>
+                    <button id="transaction-btn" class="btn btn-warning">Transaction</button>
+                 </div>
+                  
+                 <div class="divider"></div>
+
+                 <!-- Forms -->
+                  <!-- Add money start -->
+                <div id="addmoney-sec" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <form class="card-body">
                       <div class="form-control">
                         <label class="label">
-                          <span class="label-text">Phone</span>
+                          <span class="label-text">Amount</span>
                         </label>
-                        <input id="input-phone" autocomplete="off" type="number" placeholder="Phone Number" class="input input-bordered" required />
+                        <input id="input-addmoney" autocomplete="off" type="number" placeholder="Enter Amount" class="input input-bordered" required />
                       </div>
                       <div class="form-control">
                         <label class="label">
                           <span class="label-text">Pin</span>
                         </label>
-                        <input autocomplete="off" id="input-pin" type="password" placeholder="Enter Pin" class="input input-bordered" required />
+                        <input autocomplete="off" id="input-addmoney-pin" type="password" placeholder="Enter Pin" class="input input-bordered" required />
                        
                       </div>
                       <div class="form-control mt-6">
-                        <button id="login-btn" class="btn btn-primary">Login</button>
+                        <button id="add-btn" class="btn btn-primary">Add Money</button>
                       </div>
                     </form>
                   </div>
               </div>
+
+              <!-- add Money end -->
+
+              <!-- Cash out start -->
+              <div id="cashout-sec" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Amount</span>
+                    </label>
+                    <input id="input-cashout" autocomplete="off" type="number" placeholder="Enter Amount" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin</span>
+                    </label>
+                    <input autocomplete="off" id="input-cashout-pin" type="password" placeholder="Enter Pin" class="input input-bordered" required />
+                   
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="cash-btn" class="btn btn-primary">Cash Out</button>
+                  </div>
+                </form>
+              </div>
+          </div>
+           
+                <!-- Cash out end -->
+
+                <!-- transaction start -->
+
+          <div id="transaction-sec" hidden class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <h2>Transaction</h2>
+          </div>
+      </div>
+
+        <!-- transaction end -->
+
             </div>
           </div>
     </main>
+    <script src="funtions.js"></script>
+    <script src="addmoney.js"></script>
+    <script src="features.js"></script>
 </body>
 </html>
