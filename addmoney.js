@@ -8,6 +8,14 @@ document.getElementById('add-btn').addEventListener('click',function(event){
         let total= balance+addmoney;
         document.getElementById('acount-balance').innerText = total;
 
+        // creating history in transaction
+
+       let p= document.createElement('p');
+       p.innerText=`added: ${addmoney} Tk. New Balance: ${total}`;
+       console.log('p') ;
+
+       document.getElementById('transaction-sec').appendChild(p)
+
     }
 
 
@@ -35,3 +43,21 @@ document.getElementById('add-btn').addEventListener('click',function(event){
 //         alert("Wrong PIN");
 //     }
 // });
+
+
+// Cashout
+
+document.getElementById('cash-btn').addEventListener('click',function(event){
+    event.preventDefault();
+    let cashout= getInputValueById('input-cashout');
+    let cashPin= getInputValueById('input-cashout-pin');
+    if(cashPin===123){
+        let balance= getTextValueById('acount-balance');
+        let total= balance-cashout;
+        document.getElementById('acount-balance').innerText=total
+    }
+})
+
+
+// Transaction
+
