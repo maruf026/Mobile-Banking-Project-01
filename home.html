@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Banking</title>
-    
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <title>home</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
 <body>
     <main class="flex justify-center">
@@ -39,25 +37,5 @@
             </div>
           </div>
     </main>
-    
-
-    <script src="funtions.js"></script>
-    <script>
- 
-
-
-
-        document.getElementById('login-btn').addEventListener('click',function(event){
-            event.preventDefault();
-            
-
-            let phoneNum= inputValue('input-phone');
-            let pinNum= inputValue('input-pin')
-            if(phoneNum==='019' && pinNum==='123'){
-                window.location.href='./home.html'
-            }
-            else{alert('wrong')}
-        })
-    </script>
 </body>
 </html>
